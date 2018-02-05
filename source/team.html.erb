@@ -1,0 +1,21 @@
+<div id="about">
+  <div class="about-content">
+    <h1>This template is built with <i class="fa fa-heart"></i> by</h2>
+    <ul class="list-inline">
+      <% [{name: "Mickael Dana", gh:"Bidjit"},{name: "Jessica Lesly", gh:"jessicalesly"}].each do |classmate| %>
+        <li>
+          <% link_to "https://kitt.lewagon.com/alumni/#{classmate[:gh]}" do %>
+            <%= image_tag "https://kitt.lewagon.com/placeholder/users/#{classmate[:gh]}", class: "img-circle" %>
+          <% end %>
+          <h2><%= classmate[:name] %></h2>
+          <p>
+            <% link_to "https://github.com/#{classmate[:gh]}" do %>
+              <i class="fa fa-github"></i>
+              <%= classmate[:gh] %>
+            <% end %>
+          </p>
+        </li>
+      <% end %>
+    </ul>
+  </div>
+</div>
